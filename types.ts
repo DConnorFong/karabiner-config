@@ -10,6 +10,7 @@ export interface Manipulator {
   to?: To[];
   to_after_key_up?: To[];
   to_if_alone?: To[];
+  to_if_held_down?: To[];
   parameters?: Parameters;
   conditions?: Conditions[];
 }
@@ -39,7 +40,7 @@ type DeviceCondition = {
     | "device_unless"
     | "device_exists_if"
     | "device_exists_unless";
-  identifiers: Identifiers;
+  identifiers: Identifiers[];
   description?: string;
 };
 

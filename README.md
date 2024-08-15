@@ -19,10 +19,12 @@ You probably don't want to use my exact configuration, as it's optimized for my 
 ## Installation
 
 1. Install & start [Karabiner Elements](https://karabiner-elements.pqrs.org/)
-1. Clone this repository
-1. Delete the default `~/.config/karabiner` folder
-1. Create a symlink with `ln -s ~/github/mxstbr/karabiner ~/.config` (where `~/github/mxstbr/karabiner` is your local path to where you cloned the repository)
-1. [Restart karabiner_console_user_server](https://karabiner-elements.pqrs.org/docs/manual/misc/configuration-file-path/) with `` launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server ``
+2. Clone this repository
+   1. Make sure you call the directory karabiner, else the symlinking is not going to work
+   2. If you made this mistake, `mv karabiner-config karabiner`
+3. Delete the default `~/.config/karabiner` folder
+4. Create a symlink with `ln -s ~/workspace/karabiner ~/.config` (where `~/workspace/karabiner` is your local path to where you cloned the repository)
+5. [Restart karabiner_console_user_server](https://karabiner-elements.pqrs.org/docs/manual/misc/configuration-file-path/) with `` launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server ``
 
 ## Development
 
@@ -46,4 +48,4 @@ watches the TypeScript files and rebuilds whenever they change.
 
 ## License
 
-Copyright (c) 2022 Maximilian Stoiber, licensed under the [MIT license](./LICENSE.md).
+Copyright (c) 2022 Maximilian Stoiber / 2024 Connor Fong (Amendments), licensed under the [MIT license](./LICENSE.md).
