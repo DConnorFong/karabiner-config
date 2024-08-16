@@ -32,20 +32,21 @@ const rules: KarabinerRules[] = [
           },
         ],
         conditions: [
-          {
-            description: "Only trigger this rule when we are using the built in keyboard",
-            type: "device_if",
-            identifiers: [
-              {
-                is_built_in_keyboard: true,
-              }
-            ]
-          }
+          // {
+            // description: "Only trigger this rule when we are using the built in keyboard",
+            // type: "device_if",
+            // identifiers: [
+            //   {
+            //     is_built_in_keyboard: true,
+            //   }
+            // ]
+          // }
         ],
         type: "basic",
       },
     ]
   },
+  // Emulate VIA firmware macros, need not be used outside of built-in keyboard
   ...createRightOptionSubLayers({
       spacebar: {
         to: [
@@ -82,6 +83,120 @@ const rules: KarabinerRules[] = [
           }
         ]
       },
+      // Arrow keys under secondary layer
+      h: {
+        to: [
+          {
+            key_code: "left_arrow"
+          }
+        ]
+      },
+      j: {
+        to: [
+          {
+            key_code: "down_arrow"
+          }
+        ]
+      },
+      k: {
+        to: [
+          {
+            key_code: "up_arrow"
+          }
+        ]
+      },
+      l: {
+        to: [
+          {
+            key_code: "right_arrow"
+          }
+        ]
+      },
+      // F keys under secondary layer
+      1: {
+        to: [
+          {
+            key_code: "f1"
+          }
+        ]
+      },
+      2: {
+        to: [
+          {
+            key_code: "f2"
+          }
+        ]
+      },
+      3: {
+        to: [
+          {
+            key_code: "f3"
+          }
+        ]
+      },
+      4: {
+        to: [
+          {
+            key_code: "f4"
+          }
+        ]
+      },
+      5: {
+        to: [
+          {
+            key_code: "f5"
+          }
+        ]
+      },
+      6: {
+        to: [
+          {
+            key_code: "f6"
+          }
+        ]
+      },
+      7: {
+        to: [
+          {
+            key_code: "f7"
+          }
+        ]
+      },
+      8: {
+        to: [
+          {
+            key_code: "f8"
+          }
+        ]
+      },
+      9: {
+        to: [
+          {
+            key_code: "f9"
+          }
+        ]
+      },
+      0: {
+        to: [
+          {
+            key_code: "f10"
+          }
+        ]
+      },
+      hyphen: {
+        to: [
+          {
+            key_code: "f11"
+          }
+        ]
+      },
+      equal_sign: {
+        to: [
+          {
+            key_code: "f12"
+          }
+        ]
+      },
     }
   ),
   ...createHyperSubLayers({
@@ -97,11 +212,18 @@ const rules: KarabinerRules[] = [
   //     f: open("https://facebook.com"),
   //     r: open("https://reddit.com"),
   //   },
-  //   // o = "Open" applications
-  //   o: {
-  //     1: app("1Password"),
-  //     g: app("Google Chrome"),
-  //     c: app("Notion Calendar"),
+    // (O)pen application
+    o: {
+      c: app("Google Chrome"),
+      i: app("IntelliJ IDEA"),
+      w: app("WebStorm"),
+      d: app("DataGrip"),
+      s: app("Slack"),
+      // Mail/Outlook
+      m: app("Microsoft Outlook"),
+      n: app("Obsidian"),
+      p: app("Spotify"),
+  //     c: app("Notion Calendar")
   //     v: app("Visual Studio Code"),
   //     d: app("Discord"),
   //     s: app("Slack"),
@@ -126,7 +248,7 @@ const rules: KarabinerRules[] = [
   //     l: open(
   //       "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
   //     ),
-  //   },
+    },
   //
   //   // w = "Window" via rectangle.app
   //   w: {
@@ -203,136 +325,22 @@ const rules: KarabinerRules[] = [
   //     },
   //   },
   //
-    // F keys under hyper key layer
-    1: {
-      to: [
-        {
-          key_code: "f1"
-        }
-      ]
-    },
-    2: {
-      to: [
-        {
-          key_code: "f2"
-        }
-      ]
-    },
-    3: {
-      to: [
-        {
-          key_code: "f3"
-        }
-      ]
-    },
-    4: {
-      to: [
-        {
-          key_code: "f4"
-        }
-      ]
-    },
-    5: {
-      to: [
-        {
-          key_code: "f5"
-        }
-      ]
-    },
-    6: {
-      to: [
-        {
-          key_code: "f6"
-        }
-      ]
-    },
-    7: {
-      to: [
-        {
-          key_code: "f7"
-        }
-      ]
-    },
-    8: {
-      to: [
-        {
-          key_code: "f8"
-        }
-      ]
-    },
-    9: {
-      to: [
-        {
-          key_code: "f9"
-        }
-      ]
-    },
-    0: {
-      to: [
-        {
-          key_code: "f10"
-        }
-      ]
-    },
-    hyphen: {
-      to: [
-        {
-          key_code: "f11"
-        }
-      ]
-    },
-    equal_sign: {
-      to: [
-        {
-          key_code: "f12"
-        }
-      ]
-    },
-    // Arrow keys under hyper key layer
-    h: {
-      to: [
-        {
-          key_code: "left_arrow"
-        }
-      ]
-    },
-    j: {
-      to: [
-        {
-          key_code: "down_arrow"
-        }
-      ]
-    },
-    k: {
-      to: [
-        {
-          key_code: "up_arrow"
-        }
-      ]
-    },
-    l: {
-      to: [
-        {
-          key_code: "right_arrow"
-        }
-      ]
-    },
   //   // s = "System"
-    s: {
-      u: {
-        to: [
-          {
-            key_code: "volume_increment",
-          },
-        ],
-      },
-      j: {
-        to: [
-          {
-            key_code: "volume_decrement",
-          },
-        ],
-      },
+  //   s: {
+  //     u: {
+  //       to: [
+  //         {
+  //           key_code: "volume_increment",
+  //         },
+  //       ],
+  //     },
+  //     j: {
+  //       to: [
+  //         {
+  //           key_code: "volume_decrement",
+  //         },
+  //       ],
+  //     },
   //     i: {
   //       to: [
   //         {
@@ -379,7 +387,7 @@ const rules: KarabinerRules[] = [
   //     // "T"heme
   //     t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
   //     c: open("raycast://extensions/raycast/system/open-camera"),
-    },
+  //   },
   //
   //   // v = "moVe" which isn't "m" because we want it to be on the left hand
   //   // so that hjkl work like they do in vim
@@ -512,11 +520,11 @@ fs.writeFileSync(
                 },
                 {
                   from: { "key_code": "left_control" },
-                  to: [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                  to: [{ "key_code": "caps_lock" }]
                 },
                 {
                   from: { "key_code": "left_command" },
-                  to: [{ "key_code": "caps_lock" }]
+                  to: [{ "key_code": "right_option" }]
                 }
               ]
             }
