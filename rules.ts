@@ -1,16 +1,16 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
+import { createHyperSubLayers, app, open, rectangle, shell, createRightOptionSubLayers } from "./utils";
 
 const rules: KarabinerRules[] = [
-  // Define custom behavior for the MacBook spacebar; otherwise when using a custom keyboard, we should ignore it
+  // Define custom behavior for the MacBook left command; otherwise when using a custom keyboard, we should ignore it
   {
-    description: "MacBook Spacebar Layer Trigger",
+    description: "MacBook Function Layer Trigger",
     manipulators: [
       {
-        description: "Spacebar (Push) -> Spacebar, Spacebar (Hold) -> Hyper",
+        description: "Left CMD -> Hyper",
         from: {
-          key_code: "spacebar",
+          key_code: "caps_lock",
           modifiers: {
             optional: ["any"],
           },
@@ -31,11 +31,6 @@ const rules: KarabinerRules[] = [
             },
           },
         ],
-        to_if_alone: [
-          {
-            key_code: "spacebar",
-          },
-        ],
         conditions: [
           {
             description: "Only trigger this rule when we are using the built in keyboard",
@@ -51,6 +46,44 @@ const rules: KarabinerRules[] = [
       },
     ]
   },
+  ...createRightOptionSubLayers({
+      spacebar: {
+        to: [
+          {
+            key_code: "play_or_pause"
+          }
+        ]
+      },
+      up_arrow: {
+        to: [
+          {
+            key_code: "volume_increment"
+          }
+        ]
+      },
+      down_arrow: {
+        to: [
+          {
+            key_code: "volume_decrement"
+          }
+        ]
+      },
+      left_arrow: {
+        to: [
+          {
+            key_code: "rewind"
+          }
+        ]
+      },
+      right_arrow: {
+        to: [
+          {
+            key_code: "fastforward"
+          }
+        ]
+      },
+    }
+  ),
   ...createHyperSubLayers({
   //   spacebar: open(
   //     "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
@@ -170,22 +203,136 @@ const rules: KarabinerRules[] = [
   //     },
   //   },
   //
+    // F keys under hyper key layer
+    1: {
+      to: [
+        {
+          key_code: "f1"
+        }
+      ]
+    },
+    2: {
+      to: [
+        {
+          key_code: "f2"
+        }
+      ]
+    },
+    3: {
+      to: [
+        {
+          key_code: "f3"
+        }
+      ]
+    },
+    4: {
+      to: [
+        {
+          key_code: "f4"
+        }
+      ]
+    },
+    5: {
+      to: [
+        {
+          key_code: "f5"
+        }
+      ]
+    },
+    6: {
+      to: [
+        {
+          key_code: "f6"
+        }
+      ]
+    },
+    7: {
+      to: [
+        {
+          key_code: "f7"
+        }
+      ]
+    },
+    8: {
+      to: [
+        {
+          key_code: "f8"
+        }
+      ]
+    },
+    9: {
+      to: [
+        {
+          key_code: "f9"
+        }
+      ]
+    },
+    0: {
+      to: [
+        {
+          key_code: "f10"
+        }
+      ]
+    },
+    hyphen: {
+      to: [
+        {
+          key_code: "f11"
+        }
+      ]
+    },
+    equal_sign: {
+      to: [
+        {
+          key_code: "f12"
+        }
+      ]
+    },
+    // Arrow keys under hyper key layer
+    h: {
+      to: [
+        {
+          key_code: "left_arrow"
+        }
+      ]
+    },
+    j: {
+      to: [
+        {
+          key_code: "down_arrow"
+        }
+      ]
+    },
+    k: {
+      to: [
+        {
+          key_code: "up_arrow"
+        }
+      ]
+    },
+    l: {
+      to: [
+        {
+          key_code: "right_arrow"
+        }
+      ]
+    },
   //   // s = "System"
-  //   s: {
-  //     u: {
-  //       to: [
-  //         {
-  //           key_code: "volume_increment",
-  //         },
-  //       ],
-  //     },
-  //     j: {
-  //       to: [
-  //         {
-  //           key_code: "volume_decrement",
-  //         },
-  //       ],
-  //     },
+    s: {
+      u: {
+        to: [
+          {
+            key_code: "volume_increment",
+          },
+        ],
+      },
+      j: {
+        to: [
+          {
+            key_code: "volume_decrement",
+          },
+        ],
+      },
   //     i: {
   //       to: [
   //         {
@@ -232,7 +379,7 @@ const rules: KarabinerRules[] = [
   //     // "T"heme
   //     t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
   //     c: open("raycast://extensions/raycast/system/open-camera"),
-  //   },
+    },
   //
   //   // v = "moVe" which isn't "m" because we want it to be on the left hand
   //   // so that hjkl work like they do in vim
@@ -366,6 +513,10 @@ fs.writeFileSync(
                 {
                   from: { "key_code": "left_control" },
                   to: [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                },
+                {
+                  from: { "key_code": "left_command" },
+                  to: [{ "key_code": "caps_lock" }]
                 }
               ]
             }

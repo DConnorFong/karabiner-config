@@ -18,7 +18,7 @@ type HyperKeySublayer = {
  * e.g. Hyper + O ("Open") is the "open applications" layer, I can press
  * e.g. Hyper + O + G ("Google Chrome") to open Chrome
  */
-export function createHyperSubLayer(
+function createHyperSubLayer(
   sublayer_key: KeyCode,
   commands: HyperKeySublayer,
   allSubLayerVariables: string[]
@@ -147,6 +147,43 @@ export function createHyperSubLayers(subLayers: {
             allSubLayerVariables
           ),
         }
+  );
+}
+
+export function createRightOptionSubLayers(subLayers: {
+  [key_code in KeyCode]?: HyperKeySublayer | LayerCommand;
+}): KarabinerRules[] {
+  return Object.entries(subLayers).map(([key, value]) => {
+    if (!("to" in value)) {
+      throw new Error("Right Option Sublayers are not design to be nested");
+    }
+    return {
+      description: `Right Option + ${key}`,
+        manipulators: [
+          {
+            ...value,
+            type: "basic" as const,
+            from: {
+              key_code: key as KeyCode,
+              modifiers: {
+                mandatory: ["right_option"],
+              },
+            },
+            conditions: [
+              {
+                description: "Only trigger this rule when we are using the built in keyboard",
+                type: "device_if",
+                identifiers: [
+                  {
+                    is_built_in_keyboard: true,
+                  }
+                ]
+              }
+            ],
+          },
+        ],
+      }
+    }
   );
 }
 
