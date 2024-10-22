@@ -3,14 +3,14 @@ import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle, shell, createRightOptionSubLayers } from "./utils";
 
 const rules: KarabinerRules[] = [
-  // Define custom behavior for the MacBook left command; otherwise when using a custom keyboard, we should ignore it
   {
+    // Trigger a secondary layer on MacBook (HYPER) for shortcuts
     description: "MacBook Function Layer Trigger",
     manipulators: [
       {
-        description: "Left CMD -> Hyper",
+        description: "Right Option -> Hyper",
         from: {
-          key_code: "caps_lock",
+          key_code: "right_option",
           modifiers: {
             optional: ["any"],
           },
@@ -32,22 +32,24 @@ const rules: KarabinerRules[] = [
           },
         ],
         conditions: [
-          // {
-            // description: "Only trigger this rule when we are using the built in keyboard",
-            // type: "device_if",
-            // identifiers: [
-            //   {
-            //     is_built_in_keyboard: true,
-            //   }
-            // ]
-          // }
+          {
+            description: "Only trigger this rule when we are using the built in keyboard",
+            type: "device_if",
+            identifiers: [
+              {
+                is_built_in_keyboard: true,
+              }
+            ]
+          }
         ],
         type: "basic",
       },
     ]
   },
   // Emulate VIA firmware macros, need not be used outside of built-in keyboard
-  ...createRightOptionSubLayers({
+  ...createHyperSubLayers(
+    {
+      // Media
       spacebar: {
         to: [
           {
@@ -83,7 +85,7 @@ const rules: KarabinerRules[] = [
           }
         ]
       },
-      // Arrow keys under secondary layer
+      // VIM Arrows
       h: {
         to: [
           {
@@ -112,7 +114,7 @@ const rules: KarabinerRules[] = [
           }
         ]
       },
-      // F keys under secondary layer
+      // F Row
       1: {
         to: [
           {
@@ -199,7 +201,8 @@ const rules: KarabinerRules[] = [
       },
     }
   ),
-  ...createHyperSubLayers({
+  // ...createHyperSubLayers(
+  //   {
   //   spacebar: open(
   //     "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
   //   ),
@@ -212,17 +215,17 @@ const rules: KarabinerRules[] = [
   //     f: open("https://facebook.com"),
   //     r: open("https://reddit.com"),
   //   },
-    // (O)pen application
-    o: {
-      c: app("Google Chrome"),
-      i: app("IntelliJ IDEA"),
-      w: app("WebStorm"),
-      d: app("DataGrip"),
-      s: app("Slack"),
-      // Mail/Outlook
-      m: app("Microsoft Outlook"),
-      n: app("Obsidian"),
-      p: app("Spotify"),
+  //   // (O)pen application
+  //   o: {
+  //     c: app("Google Chrome"),
+  //     i: app("IntelliJ IDEA"),
+  //     w: app("WebStorm"),
+  //     d: app("DataGrip"),
+  //     s: app("Slack"),
+  //     // Mail/Outlook
+  //     m: app("Microsoft Outlook"),
+  //     n: app("Obsidian"),
+  //     p: app("Spotify"),
   //     c: app("Notion Calendar")
   //     v: app("Visual Studio Code"),
   //     d: app("Discord"),
@@ -248,7 +251,7 @@ const rules: KarabinerRules[] = [
   //     l: open(
   //       "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
   //     ),
-    },
+  //   },
   //
   //   // w = "Window" via rectangle.app
   //   w: {
@@ -437,54 +440,32 @@ const rules: KarabinerRules[] = [
   //     },
   //   },
   //
-  //   // r = "Raycast"
-  //   r: {
-  //     c: open("raycast://extensions/thomas/color-picker/pick-color"),
-  //     n: open("raycast://script-commands/dismiss-notifications"),
-  //     l: open(
-  //       "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-  //     ),
-  //     e: open(
-  //       "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-  //     ),
-  //     p: open("raycast://extensions/raycast/raycast/confetti"),
-  //     a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-  //     s: open("raycast://extensions/peduarte/silent-mention/index"),
-  //     h: open(
-  //       "raycast://extensions/raycast/clipboard-history/clipboard-history"
-  //     ),
-  //     1: open(
-  //       "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-  //     ),
-  //     2: open(
-  //       "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-  //     ),
-  //   },
-  }),
-  // {
-  //   description: "Change Backspace to Spacebar when Minecraft is focused",
-  //   manipulators: [
-  //     {
-  //       type: "basic",
-  //       from: {
-  //         key_code: "delete_or_backspace",
-  //       },
-  //       to: [
-  //         {
-  //           key_code: "spacebar",
-  //         },
-  //       ],
-  //       conditions: [
-  //         {
-  //           type: "frontmost_application_if",
-  //           file_paths: [
-  //             "^/Users/mxstbr/Library/Application Support/minecraft/runtime/java-runtime-gamma/mac-os-arm64/java-runtime-gamma/jre.bundle/Contents/Home/bin/java$",
-  //           ],
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  // }),
+  {
+    description: "Change CAPS_LOCK, ideally mapped to RIGHT_COMMAND in VIA to LEFT_CONTROL when Terminal (Kitty) is focused",
+    manipulators: [
+      {
+        type: "basic",
+        from: {
+          key_code: "right_command",
+        },
+        to: [
+          {
+            key_code: "left_control",
+          },
+        ],
+        conditions: [
+          {
+            type: "frontmost_application_if",
+            bundle_identifiers: [
+              "^net\\.kovidgoyal\\.kitty$",
+              "^com\\.apple\\.Terminal$"
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 fs.writeFileSync(
@@ -502,7 +483,9 @@ fs.writeFileSync(
           },
           // TODO: actually implement this, and carry over details to types
           devices: [
-            // When Karabiner is used, all of the System Preferences key remaps are ignored, they need to be applied to the virtual keyboard
+            // Emulate what VIA does to my other keyboards, by swapping to consistent mappings.
+            //  Note that when Karabiner is used, System Preferences remaps are actually ignored.
+            //  The virtual keyboard intercepts directly from hardware input.
             {
               identifiers: {
                 is_keyboard: true,
@@ -512,18 +495,20 @@ fs.writeFileSync(
               simple_modifications: [
                 {
                   from: { "key_code": "caps_lock" },
-                  to: [{ "key_code": "left_control" }]
+                  to: [{ "key_code": "right_command" }]
                 },
                 {
                   from: { "apple_vendor_top_case_key_code": "keyboard_fn" },
-                  to: [{ "key_code": "left_command" }]
+                  to: [{ "key_code": "left_control" }]
                 },
                 {
                   from: { "key_code": "left_control" },
-                  to: [{ "key_code": "caps_lock" }]
+                  to: [{ "key_code": "left_command" }]
                 },
                 {
                   from: { "key_code": "left_command" },
+                  // Notice RIGHT_OPTION, left option on the MacBook is still the same
+                  //  I am going to use these remaps for F row and other shortcuts
                   to: [{ "key_code": "right_option" }]
                 }
               ]

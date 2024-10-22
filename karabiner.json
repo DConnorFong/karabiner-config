@@ -1,1013 +1,2720 @@
 {
-  "global": {
-    "show_in_menu_bar": false
-  },
-  "profiles": [
-    {
-      "name": "Default",
-      "complex_modifications": {
-        "rules": [
-          {
-            "description": "MacBook Function Layer Trigger",
-            "manipulators": [
-              {
-                "description": "Left CMD -> Hyper",
-                "from": {
-                  "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "hyper",
-                      "value": 1
-                    }
-                  }
-                ],
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "hyper",
-                      "value": 0
-                    }
-                  }
-                ],
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 0",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f10"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "0",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 1",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f1"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "1",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 2",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f2"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "2",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 3",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f3"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "3",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 4",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f4"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "4",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 5",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f5"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "5",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 6",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f6"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "6",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 7",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f7"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "7",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 8",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f8"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "8",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + 9",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f9"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "9",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + spacebar",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "play_or_pause"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "spacebar",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + up_arrow",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "volume_increment"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "up_arrow",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + down_arrow",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "volume_decrement"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "down_arrow",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + left_arrow",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "rewind"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "left_arrow",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + right_arrow",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "fastforward"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "right_arrow",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + h",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "left_arrow"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + j",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "down_arrow"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "j",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + k",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "up_arrow"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + l",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "right_arrow"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "l",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + hyphen",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f11"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "hyphen",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Right Option + equal_sign",
-            "manipulators": [
-              {
-                "to": [
-                  {
-                    "key_code": "f12"
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "equal_sign",
-                  "modifiers": {
-                    "mandatory": [
-                      "right_option"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "description": "Only trigger this rule when we are using the built in keyboard",
-                    "type": "device_if",
-                    "identifiers": [
-                      {
-                        "is_built_in_keyboard": true
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "Hyper Key sublayer \"o\"",
-            "manipulators": [
-              {
-                "description": "Toggle Hyper sublayer o",
-                "type": "basic",
-                "from": {
-                  "key_code": "o",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_sublayer_o",
-                      "value": 0
-                    }
-                  }
-                ],
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "hyper_sublayer_o",
-                      "value": 1
-                    }
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Google Chrome.app'"
-                  }
-                ],
-                "description": "Open -a 'Google Chrome.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "c",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'IntelliJ IDEA.app'"
-                  }
-                ],
-                "description": "Open -a 'IntelliJ IDEA.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "i",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'WebStorm.app'"
-                  }
-                ],
-                "description": "Open -a 'WebStorm.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "w",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'DataGrip.app'"
-                  }
-                ],
-                "description": "Open -a 'DataGrip.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "d",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Slack.app'"
-                  }
-                ],
-                "description": "Open -a 'Slack.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "s",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Microsoft Outlook.app'"
-                  }
-                ],
-                "description": "Open -a 'Microsoft Outlook.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "m",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Obsidian.app'"
-                  }
-                ],
-                "description": "Open -a 'Obsidian.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "n",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Spotify.app'"
-                  }
-                ],
-                "description": "Open -a 'Spotify.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "p",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "devices": [
+    "global": { "show_in_menu_bar": false },
+    "profiles": [
         {
-          "identifiers": {
-            "is_keyboard": true,
-            "product_id": 832,
-            "vendor_id": 1452
-          },
-          "simple_modifications": [
-            {
-              "from": {
-                "key_code": "caps_lock"
-              },
-              "to": [
-                {
-                  "key_code": "left_control"
-                }
-              ]
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "MacBook Function Layer Trigger",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "Only trigger this rule when we are using the built in keyboard",
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "description": "Right Option -> Hyper",
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 0",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "0",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f10" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 1",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f1" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 2",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f2" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 3",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f3" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 4",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f4" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 5",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f5" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 6",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "6",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f6" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 7",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f7" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 8",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "8",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f8" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + 9",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f9" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + spacebar",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "play_or_pause" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + up_arrow",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "volume_increment" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + down_arrow",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "volume_decrement" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + left_arrow",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "rewind" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + right_arrow",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "fastforward" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + h",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_arrow" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + j",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "down_arrow" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + k",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "up_arrow" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + l",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "right_arrow" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + hyphen",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "hyphen",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f11" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + equal_sign",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "equal_sign",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "f12" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change CAPS_LOCK, ideally mapped to RIGHT_COMMAND in VIA to LEFT_CONTROL when Terminal (Kitty) is focused",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^net\\.kovidgoyal\\.kitty$",
+                                            "^com\\.apple\\.Terminal$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "right_command" },
+                                "to": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
             },
-            {
-              "from": {
-                "apple_vendor_top_case_key_code": "keyboard_fn"
-              },
-              "to": [
+            "devices": [
                 {
-                  "key_code": "left_command"
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 832,
+                        "vendor_id": 1452
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "right_option" }]
+                        },
+                        {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "key_code": "left_command" }]
+                        }
+                    ]
                 }
-              ]
-            },
-            {
-              "from": {
-                "key_code": "left_control"
-              },
-              "to": [
-                {
-                  "key_code": "caps_lock"
-                }
-              ]
-            },
-            {
-              "from": {
-                "key_code": "left_command"
-              },
-              "to": [
-                {
-                  "key_code": "right_option"
-                }
-              ]
-            }
-          ]
+            ],
+            "name": "Default",
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
-      ]
-    }
-  ]
+    ]
 }
