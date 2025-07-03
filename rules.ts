@@ -4,6 +4,53 @@ import { createHyperSubLayers, app, open, rectangle, shell, createRightOptionSub
 
 const rules: KarabinerRules[] = [
   {
+    // Trigger a secondary layer on Kinesis (HYPER) for shortcuts
+    description: "Kinesis Function Layer Trigger",
+    manipulators: [
+      {
+        description: "Right Option -> Hyper",
+        from: {
+          key_code: "right_option",
+          modifiers: {
+            optional: ["any"],
+          },
+        },
+        to: [
+          {
+            set_variable: {
+              name: "hyper",
+              value: 1,
+            },
+          },
+        ],
+        to_after_key_up: [
+          {
+            set_variable: {
+              name: "hyper",
+              value: 0,
+            },
+          },
+        ],
+        conditions: [
+          {
+            description: "Only trigger this rule when we are Kinesis Freestyle",
+            type: "device_if",
+            identifiers: [
+              {
+                is_game_pad: true,
+                is_keyboard: true,
+                is_pointing_device: true,
+                vendor_id: 10730,
+                product_id: 32778,
+              }
+            ]
+          },
+        ],
+        type: "basic",
+      },
+    ]
+  },
+  {
     // Trigger a secondary layer on MacBook (HYPER) for shortcuts
     description: "MacBook Function Layer Trigger",
     manipulators: [
@@ -41,20 +88,6 @@ const rules: KarabinerRules[] = [
               }
             ]
           },
-          {
-            description: "Only trigger this rule when we are Kinesis Freestyle",
-            type: "device_if",
-            identifiers: [
-              {
-                is_game_pad: true,
-                is_keyboard: true,
-                is_pointing_device: true,
-                vendor_id: 10730,
-                product_id: 32778,
-              }
-            ]
-          },
-
         ],
         type: "basic",
       },
@@ -213,6 +246,13 @@ const rules: KarabinerRules[] = [
           }
         ]
       },
+      escape: {
+        to: [
+          {
+            key_code: "grave_accent_and_tilde"
+          }
+        ]
+      }
     }
   ),
   // ...createHyperSubLayers(
@@ -546,6 +586,18 @@ fs.writeFileSync(
                   // Notice RIGHT_OPTION, left option on the MacBook is still the same
                   //  I am going to use these remaps for F row and other shortcuts
                   to: [{ "key_code": "right_option" }]
+                },
+                {
+                  from: { "key_code": "delete_or_backspace" },
+                  to: [{ "key_code": "backslash" }]
+                },
+                {
+                  from: { "key_code": "backslash" },
+                  to: [{ "key_code": "delete_or_backspace" }]
+                },
+                {
+                  from: { "key_code": "grave_accent_and_tilde" },
+                  to: [{ "key_code": "escape" }]
                 }
               ]
             },

@@ -5,15 +5,10 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "MacBook Function Layer Trigger",
+                        "description": "Kinesis Function Layer Trigger",
                         "manipulators": [
                             {
                                 "conditions": [
-                                    {
-                                        "description": "Only trigger this rule when we are using the built in keyboard",
-                                        "identifiers": [{ "is_built_in_keyboard": true }],
-                                        "type": "device_if"
-                                    },
                                     {
                                         "description": "Only trigger this rule when we are Kinesis Freestyle",
                                         "identifiers": [
@@ -25,6 +20,42 @@
                                                 "vendor_id": 10730
                                             }
                                         ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "description": "Right Option -> Hyper",
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "MacBook Function Layer Trigger",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "Only trigger this rule when we are using the built in keyboard",
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
                                         "type": "device_if"
                                     }
                                 ],
@@ -167,6 +198,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -290,6 +326,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -417,6 +458,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -540,6 +586,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -667,6 +718,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -790,6 +846,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -917,6 +978,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -1040,6 +1106,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -1167,6 +1238,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -1290,6 +1366,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -1417,6 +1498,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -1540,6 +1626,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -1667,6 +1758,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -1790,6 +1886,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -1917,6 +2018,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -2040,6 +2146,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -2167,6 +2278,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -2290,6 +2406,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -2417,6 +2538,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -2540,6 +2666,11 @@
                                     },
                                     {
                                         "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
                                         "type": "variable_if",
                                         "value": 0
                                     }
@@ -2667,6 +2798,11 @@
                                         "name": "hyper_sublayer_equal_sign",
                                         "type": "variable_if",
                                         "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -2674,6 +2810,136 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "f12" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper Key + escape",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_0",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_1",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_2",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_3",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_4",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_5",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_6",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_7",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_8",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_9",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_up_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_down_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_left_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_right_arrow",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_h",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_j",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_k",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_l",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_hyphen",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_equal_sign",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_escape",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "grave_accent_and_tilde" }],
                                 "type": "basic"
                             }
                         ]
@@ -2735,8 +3001,20 @@
                     "ignore": false,
                     "simple_modifications": [
                         {
+                            "from": { "key_code": "backslash" },
+                            "to": [{ "key_code": "delete_or_backspace" }]
+                        },
+                        {
                             "from": { "key_code": "caps_lock" },
                             "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "delete_or_backspace" },
+                            "to": [{ "key_code": "backslash" }]
+                        },
+                        {
+                            "from": { "key_code": "grave_accent_and_tilde" },
+                            "to": [{ "key_code": "escape" }]
                         },
                         {
                             "from": { "key_code": "left_option" },
