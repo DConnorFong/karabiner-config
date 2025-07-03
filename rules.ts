@@ -40,7 +40,21 @@ const rules: KarabinerRules[] = [
                 is_built_in_keyboard: true,
               }
             ]
-          }
+          },
+          {
+            description: "Only trigger this rule when we are Kinesis Freestyle",
+            type: "device_if",
+            identifiers: [
+              {
+                is_game_pad: true,
+                is_keyboard: true,
+                is_pointing_device: true,
+                vendor_id: 10730,
+                product_id: 32778,
+              }
+            ]
+          },
+
         ],
         type: "basic",
       },
@@ -489,8 +503,7 @@ fs.writeFileSync(
             {
               identifiers: {
                 is_keyboard: true,
-                product_id: 832,
-                vendor_id: 1452
+                is_built_in_keyboard: true
               },
               simple_modifications: [
                 {
@@ -512,7 +525,31 @@ fs.writeFileSync(
                   to: [{ "key_code": "right_option" }]
                 }
               ]
-            }
+            },
+            // TODO: fix duplicate code block with function
+            {
+              identifiers: {
+                is_game_pad: true,
+                is_keyboard: true,
+                is_pointing_device: true,
+                vendor_id: 10730,
+                product_id: 32778,
+              },
+              ignore: false,
+              simple_modifications: [
+                {
+                  from: { "key_code": "caps_lock" },
+                  to: [{ "key_code": "right_command" }]
+                },
+                {
+                  from: { "key_code": "left_option" },
+                  // Notice RIGHT_OPTION, left option on the MacBook is still the same
+                  //  I am going to use these remaps for F row and other shortcuts
+                  to: [{ "key_code": "right_option" }]
+                }
+              ]
+            },
+
           ]
         },
       ],

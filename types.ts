@@ -36,10 +36,10 @@ type FrontMostApplicationCondition = {
 
 type DeviceCondition = {
   type:
-    | "device_if"
-    | "device_unless"
-    | "device_exists_if"
-    | "device_exists_unless";
+  | "device_if"
+  | "device_unless"
+  | "device_exists_if"
+  | "device_exists_unless";
   identifiers: Identifiers[];
   description?: string;
 };
@@ -48,6 +48,7 @@ interface Identifiers {
   vendor_id?: number;
   product_id?: number;
   location_id?: number;
+  is_game_pad?: boolean;
   is_keyboard?: boolean;
   is_pointing_device?: boolean;
   is_touch_bar?: boolean;

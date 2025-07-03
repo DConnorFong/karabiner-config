@@ -113,40 +113,40 @@ export function createHyperSubLayers(subLayers: {
   return Object.entries(subLayers).map(([key, value]) =>
     "to" in value
       ? {
-          description: `Hyper Key + ${key}`,
-          manipulators: [
-            {
-              ...value,
-              type: "basic" as const,
-              from: {
-                key_code: key as KeyCode,
-                modifiers: {
-                  optional: ["any"],
-                },
+        description: `Hyper Key + ${key}`,
+        manipulators: [
+          {
+            ...value,
+            type: "basic" as const,
+            from: {
+              key_code: key as KeyCode,
+              modifiers: {
+                optional: ["any"],
               },
-              conditions: [
-                {
-                  type: "variable_if",
-                  name: "hyper",
-                  value: 1,
-                },
-                ...allSubLayerVariables.map((subLayerVariable) => ({
-                  type: "variable_if" as const,
-                  name: subLayerVariable,
-                  value: 0,
-                })),
-              ],
             },
-          ],
-        }
+            conditions: [
+              {
+                type: "variable_if",
+                name: "hyper",
+                value: 1,
+              },
+              ...allSubLayerVariables.map((subLayerVariable) => ({
+                type: "variable_if" as const,
+                name: subLayerVariable,
+                value: 0,
+              })),
+            ],
+          },
+        ],
+      }
       : {
-          description: `Hyper Key sublayer "${key}"`,
-          manipulators: createHyperSubLayer(
-            key as KeyCode,
-            value,
-            allSubLayerVariables
-          ),
-        }
+        description: `Hyper Key sublayer "${key}"`,
+        manipulators: createHyperSubLayer(
+          key as KeyCode,
+          value,
+          allSubLayerVariables
+        ),
+      }
   );
 }
 
@@ -159,31 +159,41 @@ export function createRightOptionSubLayers(subLayers: {
     }
     return {
       description: `Right Option + ${key}`,
-        manipulators: [
-          {
-            ...value,
-            type: "basic" as const,
-            from: {
-              key_code: key as KeyCode,
-              modifiers: {
-                mandatory: ["right_option"],
-              },
+      manipulators: [
+        {
+          ...value,
+          type: "basic" as const,
+          from: {
+            key_code: key as KeyCode,
+            modifiers: {
+              mandatory: ["right_option"],
             },
-            conditions: [
-              {
-                description: "Only trigger this rule when we are using the built in keyboard",
-                type: "device_if",
-                identifiers: [
-                  {
-                    is_built_in_keyboard: true,
-                  }
-                ]
-              }
-            ],
           },
-        ],
-      }
+          conditions: [
+            {
+              description: "Only trigger this rule when we are using the built in keyboard",
+              type: "device_if",
+              identifiers: [
+                {
+                  is_built_in_keyboard: true,
+                }
+              ]
+            },
+            {
+              description: "Only trigger this rule when we are using the Kinesis Freestyle",
+              type: "device_if",
+              identifiers: [
+                {
+                  vendor_id: 10730,
+                  product_id: 32778,
+                }
+              ]
+            }
+          ],
+        },
+      ],
     }
+  }
   );
 }
 

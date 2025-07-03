@@ -13,6 +13,19 @@
                                         "description": "Only trigger this rule when we are using the built in keyboard",
                                         "identifiers": [{ "is_built_in_keyboard": true }],
                                         "type": "device_if"
+                                    },
+                                    {
+                                        "description": "Only trigger this rule when we are Kinesis Freestyle",
+                                        "identifiers": [
+                                            {
+                                                "is_game_pad": true,
+                                                "is_keyboard": true,
+                                                "is_pointing_device": true,
+                                                "product_id": 32778,
+                                                "vendor_id": 10730
+                                            }
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
                                 "description": "Right Option -> Hyper",
@@ -2689,9 +2702,8 @@
             "devices": [
                 {
                     "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 832,
-                        "vendor_id": 1452
+                        "is_built_in_keyboard": true,
+                        "is_keyboard": true
                     },
                     "simple_modifications": [
                         {
@@ -2709,6 +2721,26 @@
                         {
                             "from": { "key_code": "left_control" },
                             "to": [{ "key_code": "left_command" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_game_pad": true,
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 32778,
+                        "vendor_id": 10730
+                    },
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "caps_lock" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "right_option" }]
                         }
                     ]
                 }
