@@ -598,6 +598,10 @@ fs.writeFileSync(
                 {
                   from: { "key_code": "grave_accent_and_tilde" },
                   to: [{ "key_code": "escape" }]
+                },
+                {
+                  from: { "key_code": "left_command" },
+                  to: [{ "key_code": "left_option" }]
                 }
               ]
             },

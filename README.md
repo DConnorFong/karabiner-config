@@ -36,6 +36,9 @@ yarn run watch
 
 watches the TypeScript files and rebuilds whenever they change.
 
+## Troubleshooting
+Often just try to manually go over to Karabiner and restart from the UI if some interactions are behaving weirdly (and have previously worked with no changes to the configuration)
+
 ## License
 
 Copyright (c) 2022 Maximilian Stoiber / 2024 Connor Fong (Amendments), licensed under the [MIT license](./LICENSE.md).
